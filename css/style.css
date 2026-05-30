@@ -12,6 +12,10 @@ body {
     background: #171615;
 }
 
+html {
+    font-size: 0.75px;
+}
+
 a {
     cursor: url('../img/pointer.cur'), auto;
     font-size: 11.6px;
@@ -27,8 +31,13 @@ a:hover {
     color: lightgreen;
 }
 
-.logo {
-    width: 222px;
+.logo img {
+    width: 100%;
+}
+
+.burger span {
+    width: 70px;
+    display: flex;
 }
 
 .header {
@@ -36,7 +45,6 @@ a:hover {
     padding: 15px 40px;
     background: #262423;
     margin: 0;
-
 }
 
 .menu ul,
@@ -80,6 +88,22 @@ a:hover {
     border: 2px solid #52A535;
 }
 
+.burger {
+    width: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger span {
+    display: none;
+    width: 100%;
+    height: 5px;
+    background: #518315;
+    border-radius: 3px;
+}
+
 .button_container a:hover {
     background-color: lightgreen;
     color: #fff;
@@ -106,7 +130,7 @@ a:hover {
     color: #6cc349;
 }
 
-.discover_container h3{
+.discover_container h3 {
     text-align: left;
 }
 
@@ -116,11 +140,11 @@ a:hover {
     background: url(../img/header_bg.jpg) no-repeat center/cover;
 }
 
-.discover_container p{
+.discover_container p {
     line-height: 24px;
     color: gray;
     text-align: left;
-    font-size:14px;
+    font-size: 14px;
     margin: 0;
     padding: 0 5px 14px;
 }
@@ -135,7 +159,7 @@ a:hover {
     margin-bottom: 23px;
 }
 
-figcaption{
+figcaption {
     position: relative;
 }
 
@@ -175,7 +199,7 @@ h2 {
     color: #fff;
     margin-bottom: 10px;
     background: #262423;
- }
+}
 
 
 .newest_cards_container {
@@ -187,20 +211,22 @@ h2 {
     padding: 80px 0;
     color: white;
 }
+
 .card-text {
     text-align: left;
     padding: 14px 12px;
-   position: absolute;
+    position: absolute;
     width: 100%;
     bottom: 0;
-    left:0;
-    overflow:hidden;
-    backdrop-filter: blur(2px); 
+    left: 0;
+    overflow: hidden;
+    backdrop-filter: blur(2px);
     background: rgba(0, 0, 0, 0.3);
 }
+
 .newest_cards_container h3 {
     display: inline-block;
-    font-family:"Press Start 2P", system-ui;
+    font-family: "Press Start 2P", system-ui;
     font-size: 10px;
     letter-spacing: 0.56px;
     padding: 0 4px 1px;
@@ -224,8 +250,9 @@ h2 {
     line-height: 24px;
 }
 
-.card-text h3,p{
-    font-size:14px;
+.card-text h3,
+p {
+    font-size: 14px;
     margin: 0;
     padding: 0 5px 14px;
 }
@@ -257,16 +284,13 @@ h2 {
     margin-bottom: 16px;
 }
 
-.work_card p{
-  font-family: 'Noto Sans', serif;
+.work_card p {
+    font-family: 'Noto Sans', serif;
 }
 
 
 .card {
-    width: 25%;
-    max-height: 300px;
     height: 100%;
-
 }
 
 
@@ -279,8 +303,9 @@ h2 {
 }
 
 .cards_container {
-    gap: 20px;
+    gap: 20rem;
     size: 6px;
+    flex-wrap: wrap;
 }
 
 .card_h2 {
@@ -319,9 +344,50 @@ h2 {
 .footer_container {
     background-color: #313131;
     align-items: center;
-    gap:15px;
+    gap: 15px;
     padding: 12px;
     margin: auto;
     max-width: 1440px;
     padding: 32px 0 27px 0;
+}
+
+@media screen and (min-width:768px) {
+    html {
+        font-size: 85px;
+    }
+
+    .cards_container {
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        width: 25%;
+    }
+}
+
+@media screen and(min-width:1200px) {
+    html {
+        font-size: 1px;
+    }
+
+    .menu,
+    .button_container {
+        display: block;
+    }
+}
+
+.burger {
+    display: none;
+}
+
+@media screen and(min-width:1920px) {
+    html {
+        font-size: 1.3px;
+    }
+}
+
+@media screen and(min-width:2200px) {
+    html {
+        font-size: 1.5px;
+    }
 }
