@@ -45,6 +45,7 @@ a:hover {
     padding: 15px 40px;
     background: #262423;
     margin: 0;
+    url("")
 }
 
 .menu ul,
@@ -210,6 +211,7 @@ h2 {
     height: 50%;
     padding: 80px 0;
     color: white;
+    flex-wrap: wrap;
 }
 
 .card-text {
@@ -290,7 +292,7 @@ p {
 
 
 .card {
-    height: 100%;
+    width: 100%;
 }
 
 
@@ -303,9 +305,8 @@ p {
 }
 
 .cards_container {
+    flex-wrap: nowrap;
     gap: 20rem;
-    size: 6px;
-    flex-wrap: wrap;
 }
 
 .card_h2 {
@@ -323,6 +324,10 @@ p {
     color: #aba09c;
 }
 
+.card img {
+    width: 100%;
+}
+
 
 
 
@@ -331,6 +336,20 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
+}
+
+.menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80wv;
+}
+
+.menu a {
+    display: block;
+    padding: 5rem 10rem;
+    font-size: 24rem;
 }
 
 
@@ -353,19 +372,33 @@ p {
 
 @media screen and (min-width:768px) {
     html {
-        font-size: 85px;
+        font-size: 0.85px;
     }
 
     .cards_container {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .card {
-        width: 25%;
+        width: 45%;
+    }
+
+    .card img {
+        max-width: 517rem;
+        max-height: 517rem;
+    }
+
+    .newest_container {
+        flex-wrap: nowrap;
+    }
+
+    .work_container {
+        flex-wrap: nowrap;
     }
 }
 
-@media screen and(min-width:1200px) {
+@media screen and (min-width:1200px) {
     html {
         font-size: 1px;
     }
@@ -374,19 +407,48 @@ p {
     .button_container {
         display: block;
     }
+
+    .cards_container {
+        flex-wrap: nowrap;
+    }
+
+    .newest_cards_container {
+        flex-wrap: nowrap;
+    }
+
+    .menu {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+
+    .menu_header ul {
+        justify-content: space-between;
+    }
+
+    .cancel {
+        display: none;
+    }
+
+    .menu a{
+        font-size:12rem;
+    }
+
+
+
 }
 
 .burger {
     display: none;
 }
 
-@media screen and(min-width:1920px) {
+@media screen and (min-width:1920px) {
     html {
         font-size: 1.3px;
     }
 }
 
-@media screen and(min-width:2200px) {
+@media screen and (min-width:2200px) {
     html {
         font-size: 1.5px;
     }
