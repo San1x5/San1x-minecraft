@@ -259,6 +259,7 @@ p {
 
 
 .work_container {
+    flex-wrap:wrap ;
     padding: 80px 0;
     background: #4f1030;
     margin: 0;
