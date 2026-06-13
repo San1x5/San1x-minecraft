@@ -116,6 +116,10 @@ a:hover {
     margin: 0 auto;
 }
 
+.header, .flex_between{
+flex-wrap: nowrap;
+}
+
 .flex_between {
     display: flex;
     justify-content: space-between;
@@ -337,8 +341,9 @@ p {
     display: block;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 80wv;
+    left: -100%;
+    width: 80vw;
+    background: #000;
 }
 
 .menu a {
